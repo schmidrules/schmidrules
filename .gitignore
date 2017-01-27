@@ -1,0 +1,26 @@
+# Maven
+target/
+
+# IDEA
+.idea/
+*.iml
+workbench.xmi
+
+# Eclipse
+.classpath
+.project
+.settings/
+.checkstyle
+
+# Mac OS X
+.DS_Store
+
+# VI
+.*.swp
+.*.vim
+
+# Logger
+*.log
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*

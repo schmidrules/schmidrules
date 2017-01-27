@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<architecture>
+    <configuration>
+        <sources>
+            <source>src/main/java</source>
+        </sources>
+
+        <globalPackageDependencies>
+        	<package>java.io</package>
+        	<package>java.nio.file</package>
+        	<package>java.util</package>
+        	<package>java.util.regex</package>
+        	<package>java.text</package>
+        	<package>org.slf4j</package>
+        </globalPackageDependencies>
+    </configuration>
+
+    <components>
+        <component id="util">
+            <description>
+                Utility classes.
+            </description>
+            <publicPackages>
+            	<package>org.schmidrules.dependency</package>
+            </publicPackages>
+        </component>
+        
+        <component id="model">
+            <description>
+                Rule definitions loaded from schmid-rules.xml.
+            </description>
+            <publicPackages>
+            	<package>org.schmidrules.configuration</package>
+            	<package>org.schmidrules.configuration.dto</package>
+            </publicPackages>
+            <packageDependencies>
+            	<package>javax.xml.bind</package>
+            	<package>javax.xml.bind.annotation</package>
+            	<package>javax.xml.bind.annotation.adapters</package>
+            	<package>javax.xml.bind.helpers</package>
+            </packageDependencies>
+            <componentDependencies>
+	        	<componentDependency>util</componentDependency>
+            </componentDependencies>
+        </component>
+
+        <component id="assert">
+            <description>
+                Verifies if the model matches the sources.
+            </description>
+            <publicPackages>
+            	<package>org.schmidrules.check</package>
+            </publicPackages>
+            <internalPackages>
+            	<package>org.schmidrules.check.grant</package>
+            </internalPackages>
+            <componentDependencies>
+	        	<componentDependency>model</componentDependency>
+	        	<componentDependency>util</componentDependency>
+            </componentDependencies>
+        </component>
+        
+        <component id="xmi">
+            <description>
+                Generates an XMI file from the model.
+            </description>
+            <publicPackages>
+            	<package>org.schmidrules.xmi</package>
+            </publicPackages>
+            <componentDependencies>
+	        	<componentDependency>model</componentDependency>
+	        	<componentDependency>util</componentDependency>
+            </componentDependencies>
+            <packageDependencies>
+            	<package>org.jdom2</package>
+            	<package>org.jdom2.output</package>
+            </packageDependencies>
+        </component>
+        
+        <component id="main">
+            <description>
+                Provides facade-like access to XMI and assert features.
+            </description>
+            <publicPackages>
+            	<package>org.schmidrules</package>
+            </publicPackages>
+            <componentDependencies>
+	        	<componentDependency>model</componentDependency>
+	        	<componentDependency>assert</componentDependency>
+	        	<componentDependency>xmi</componentDependency>
+            </componentDependencies>
+        </component>
+    </components>
+
+</architecture>

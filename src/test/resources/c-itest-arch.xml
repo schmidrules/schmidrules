@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<architecture>
+	<configuration>
+		<sources>
+			<source>src/test/resources/srcfolder</source>
+		</sources>
+
+		<globalPackageDependencies>
+			<package>.</package>
+			<package>gwlib</package>
+			<package>config/entity</package>
+			<package>util</package>
+			<package>util/collection</package>
+		</globalPackageDependencies>
+	</configuration>
+
+	<components>
+		<component id="dgw">
+			<description>DGW</description>
+			<publicPackages>
+				<package>dgw</package>
+				<package>dgwlib</package>
+			</publicPackages>
+		</component>
+		
+		<component id="message">
+			<description>Message</description>
+			<publicPackages>
+				<package>transact/message</package>
+			</publicPackages>
+		</component>
+
+		<component id="billing">
+			<description>Billing</description>
+			<publicPackages>
+				<package>transact/billing</package>
+			</publicPackages>
+			<componentDependencies>
+				<componentDependency>dgw</componentDependency>
+				<componentDependency> message</componentDependency>
+			</componentDependencies>
+		</component>
+
+		<component id="blacklist">
+			<description>Blacklist</description>
+			<publicPackages>
+				<package>transact/blacklist</package>
+			</publicPackages>
+			<componentDependencies>
+				<componentDependency>dgw</componentDependency>
+				<componentDependency>message</componentDependency>
+			</componentDependencies>
+			<packageDependencies>
+				<package>transact/msisdn</package>
+			</packageDependencies>
+		</component>
+	</components>
+</architecture>
