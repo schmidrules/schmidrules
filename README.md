@@ -1,8 +1,11 @@
-# Schmidrules #
+# Schmidrules Application Architecture#
 
-Assert your application architecture.
-Das ist der Hammer! C the difference.
+Easy application architecture documentation and assertion.
+Supported languages:
+* Java
+* C/C++
 
-### What is this repository for? ###
 
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### The Maven Plugin ###
+
+* [Schmidrules-maven-plugin](https://github.com/schmidrules/schmidrules-maven-plugin)
