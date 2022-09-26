@@ -18,7 +18,7 @@ import org.schmidrules.dependency.Pckg;
 public class CFileAnalyzer extends Analyzer {
 
     public CFileAnalyzer() {
-        super(Arrays.asList("c", "h"));
+        super(Arrays.asList("c", "h", "cpp"));
     }
 
     @Override
