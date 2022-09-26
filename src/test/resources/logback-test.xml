@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="LOG_LEVEL_CONSOLE" value="${LOG_LEVEL_CONSOLE:-DEBUG}" />
+    <property name="LOG_PATTERN"
+        value="%d{yyyy-MM-dd HH:mm:ss.SSS Z} %-5level [%.40logger{5}] %m%n" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>${LOG_LEVEL_CONSOLE}</level>
+        </filter>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+    </root>
+    
+    <logger name="org.schmidrules" level="WARN" />
+
+</configuration>
