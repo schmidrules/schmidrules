@@ -3,6 +3,7 @@ package org.schmidrules.configuration;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -52,8 +53,12 @@ public class ConfigurationLoader {
                 throw new IllegalArgumentException("Configration File not found: " + fileName, e);
             }
         }
-        architecture = XmlUtil.unmarshal(new InputStreamReader(stream), ArchitectureDto.class);
-        logger.info("Loading architecture from configuration file finished.");
+        try (InputStreamReader input = new InputStreamReader(stream)) {
+            architecture = XmlUtil.unmarshal(input, ArchitectureDto.class);
+            logger.info("Loading architecture from configuration file finished.");
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Configration File not loaded: " + fileName, e);
+        }
     }
 
     public ArchitectureDto getArchitecture() {
