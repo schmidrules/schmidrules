@@ -27,7 +27,7 @@ public abstract class Violation {
 
     @Override
     public String toString() {
-        return "Violation [description=" + description + ", location=" + location + "]";
+        return "Violation " + severity +" [description=" + description + ", location=" + location + "]";
     }
 
     public enum Severity {
