@@ -10,6 +10,7 @@
 			<package>java.nio.file</package>
 			<package>java.nio.charset</package>
 			<package>java.util</package>
+			<package>java.util.function</package>
 			<package>java.util.stream</package>
 			<package>java.util.regex</package>
 			<package>java.text</package>
