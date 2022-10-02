@@ -17,9 +17,9 @@ import org.schmidrules.configuration.dto.ComponentDto;
 import org.schmidrules.configuration.dto.PackageReferenceDto;
 
 public class CreationPhase {
-
-    private static final Namespace xmiNs = Namespace.getNamespace("xmi", "http://schema.omg.org/spec/XMI/2.1");
-    private static final Namespace umlNs = Namespace.getNamespace("uml", "http://schema.omg.org/spec/UML/2.1");
+    
+    private static final Namespace xmiNs = Namespace.getNamespace("xmi", "https://www.omg.org/spec/XMI/2.1.1");
+    private static final Namespace umlNs = Namespace.getNamespace("uml", "https://www.omg.org/spec/UML/2.1.2");
 
     private final String projectName;
     private final Collection<PreparedComponent> components;
