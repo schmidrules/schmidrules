@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="https://www.omg.org/spec/XMI/2.1.1" xmlns:uml="https://www.omg.org/spec/UML/2.1.2" xmi:version="2.1">
+  <xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" />
+  <uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+    <packagedElement xmi:type="uml:Package" xmi:id="EAID_1" name="SCHMID-SAMPLE" visibility="public">
+      <packagedElement xmi:type="uml:Class" xmi:id="EAID_2" name="util" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_3" name="org.schmidrules.dependency" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_publicPackage" />
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="EAID_4" name="xmi" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_5" name="org.jdom2" visibility="package" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_packageDepedency" />
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6" name="org.jdom2.output" visibility="package" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_packageDepedency" />
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_7" name="org.schmidrules.xmi" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_publicPackage" />
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="EAID_8" name="assert" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_9" name="org.schmidrules.check" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_publicPackage" />
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_10" name="org.schmidrules.check.grant" visibility="private" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_internalPackage" />
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="EAID_11" name="model" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_12" name="javax.xml.bind" visibility="package" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_packageDepedency" />
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_13" name="javax.xml.bind.annotation" visibility="package" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_packageDepedency" />
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_14" name="javax.xml.bind.annotation.adapters" visibility="package" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_packageDepedency" />
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_15" name="javax.xml.bind.helpers" visibility="package" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_packageDepedency" />
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_16" name="org.schmidrules.configuration" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_publicPackage" />
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_17" name="org.schmidrules.configuration.dto" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_publicPackage" />
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="EAID_18" name="main" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_19" name="org.schmidrules" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+          <type xmi:idref="EAJava_publicPackage" />
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_20" visibility="public" supplier="EAID_11" client="EAID_4" />
+      <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_21" visibility="public" supplier="EAID_2" client="EAID_4" />
+      <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_22" visibility="public" supplier="EAID_11" client="EAID_8" />
+      <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_23" visibility="public" supplier="EAID_2" client="EAID_8" />
+      <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_24" visibility="public" supplier="EAID_2" client="EAID_11" />
+      <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_25" visibility="public" supplier="EAID_11" client="EAID_18" />
+      <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_26" visibility="public" supplier="EAID_8" client="EAID_18" />
+      <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_27" visibility="public" supplier="EAID_4" client="EAID_18" />
+    </packagedElement>
+  </uml:Model>
+  <xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+    <elements>
+      <element xmi:idref="EAID_2" xmi:type="uml:Class" name="util" scope="public">
+        <properties documentation="Utility classes." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isAbstract="false" isActive="false" />
+      </element>
+      <element xmi:idref="EAID_4" xmi:type="uml:Class" name="xmi" scope="public">
+        <properties documentation="Generates an XMI file from the model." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isAbstract="false" isActive="false" />
+      </element>
+      <element xmi:idref="EAID_8" xmi:type="uml:Class" name="assert" scope="public">
+        <properties documentation="Verifies if the model matches the sources." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isAbstract="false" isActive="false" />
+      </element>
+      <element xmi:idref="EAID_11" xmi:type="uml:Class" name="model" scope="public">
+        <properties documentation="Rule definitions loaded from schmid-rules.xml." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isAbstract="false" isActive="false" />
+      </element>
+      <element xmi:idref="EAID_18" xmi:type="uml:Class" name="main" scope="public">
+        <properties documentation="Provides facade-like access to XMI and assert features." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isAbstract="false" isActive="false" />
+      </element>
+    </elements>
+    <diagrams>
+      <diagram xmi:id="EAID_28">
+        <model package="EAID_1" localID="9" owner="EAID_1" />
+        <properties name="Components" type="Component" />
+        <project author="ogrof" version="1.0" created="[Date1]" modified="[Date1]" />
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=791;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;" />
+        <style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=,;SaveTag=7780A26D;" />
+        <swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;" />
+        <matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;width=1;" />
+        <extendedProperties />
+        <elements>
+          <element geometry="Left=130;Top=160;Right=269;Bottom=310;" subject="EAID_2" seqno="1" style="DUID=69FBF26C;Notes=1000;" />
+          <element geometry="Left=130;Top=320;Right=269;Bottom=470;" subject="EAID_4" seqno="2" style="DUID=69FBF26C;Notes=1000;" />
+          <element geometry="Left=130;Top=480;Right=269;Bottom=630;" subject="EAID_8" seqno="3" style="DUID=69FBF26C;Notes=1000;" />
+          <element geometry="Left=130;Top=640;Right=269;Bottom=790;" subject="EAID_11" seqno="4" style="DUID=69FBF26C;Notes=1000;" />
+          <element geometry="Left=130;Top=800;Right=269;Bottom=950;" subject="EAID_18" seqno="5" style="DUID=69FBF26C;Notes=1000;" />
+        </elements>
+      </diagram>
+    </diagrams>
+  </xmi:Extension>
+</xmi:XMI>
